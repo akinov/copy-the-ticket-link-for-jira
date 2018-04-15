@@ -34,11 +34,9 @@
     } else if (isJiraUrl(url)) {
       if (/\/browse\//.test(url)) {
         // チケット固有URLの場合
-        console.log(2);
         title = getTitleForJiraBrowse();
       } else {
         // スクラムボードの場合
-        console.log(1);
         title = getTitleForJiraBoard();
         url = getUrlForJiraBoard();
       }
