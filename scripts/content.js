@@ -12,17 +12,17 @@
   }
 
   function execCopy(text) {
-    const input = document.createElement('input');
-    input.style.position = 'fixed';
-    input.style.opacity = 0;
-    input.value = text;
+    const textarea = document.createElement('textarea');
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = 0;
+    textarea.value = text;
 
-    document.body.appendChild(input);
+    document.body.appendChild(textarea);
 
-    input.select();
+    textarea.select();
     document.execCommand('Copy');
 
-    document.body.removeChild(input);
+    document.body.removeChild(textarea);
   }
 
   function getFormattedTicketLink(format) {
