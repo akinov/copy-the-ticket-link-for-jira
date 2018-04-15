@@ -12,7 +12,6 @@
   }
 
   function execCopy(text) {
-    console.log(text);
     const input = document.createElement('input');
     input.style.position = 'fixed';
     input.style.opacity = 0;
