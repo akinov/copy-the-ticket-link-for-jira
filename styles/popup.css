@@ -19,6 +19,6 @@ body {
   width: 100%;
 }
 
-#buttons button:active {
+#buttons button:hover {
   background: #f7f7f7;
 }
