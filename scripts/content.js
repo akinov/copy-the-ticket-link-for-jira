@@ -58,29 +58,30 @@
 
   function getTitleForGithub() {
     const h1 = 'h1.gh-header-title';
-    const title = document.querySelectorAll(`${h1} .js-issue-title`)[0].innerText.trim();
-    const num = document.querySelectorAll(`${h1} .gh-header-number`)[0].innerText;
+    const title = document.querySelector(`${h1} .js-issue-title`).innerText.trim();
+    const num = document.querySelector(`${h1} .gh-header-number`).innerText;
 
     return `${num}｜${title}`;
   }
 
   function getTitleForJiraBrowse() {
-    const title = document.querySelectorAll('h1.hYXQEK')[0].innerText.trim();
-    const num = document.querySelectorAll('a.ihyVSq')[0].innerText;
+    const title = document.querySelector('h1.hYXQEK').innerText.trim();
+    const num = document.querySelector('a.ihyVSq').innerText;
 
     return `${num}｜${title}`;
   }
 
   function getTitleForJiraBoard() {
     const selected = '.ghx-selected';
-    const title = document.querySelectorAll(`${selected} .ghx-summary`)[0].innerText.trim();
-    const num = document.querySelectorAll(`${selected} a.ghx-key`)[0].getAttribute('aria-label');
+    const title = document.querySelector(`${selected} .ghx-summary`).innerText.trim();
+    const numDom = document.querySelector(`${selected} a.ghx-key`);
+    const num = numDom.getAttribute('aria-label') || numDom.getAttribute('title');
 
     return `${num}｜${title}`;
   }
 
   function getUrlForJiraBoard() {
-    const href = document.querySelectorAll('.ghx-selected a.ghx-key')[0].getAttribute('href');
+    const href = document.querySelector('.ghx-selected a.ghx-key').getAttribute('href');
     return `https://${window.location.host}${href}`;
   }
 

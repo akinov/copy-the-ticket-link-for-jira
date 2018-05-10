@@ -1,7 +1,7 @@
 {
   "name": "Copy the ticket link",
   "description": "Copy links of Github and Jira",
-  "version": "0.1",
+  "version": "0.2",
   "author": "akinov",
   "permissions": [ "clipboardWrite", "activeTab", "declarativeContent" ],
   "icons": {
